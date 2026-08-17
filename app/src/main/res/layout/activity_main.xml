@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center_vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Private DNS Toggle"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="1. Pull down your notification shade twice, tap the pencil/edit icon, and drag the 'Private DNS' tile into your active tiles.\n\n2. For the tile to toggle instantly (no manual tap needed), connect this phone to a computer with ADB and run the command below once.\n\n3. Without that step, tapping the tile will just open the system Private DNS screen for you."
+        android:textSize="15sp"
+        android:layout_marginBottom="24dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="adb shell pm grant com.example.privatednstoggle android.permission.WRITE_SECURE_SETTINGS"
+        android:textSize="13sp"
+        android:fontFamily="monospace"
+        android:background="#EEEEEE"
+        android:padding="12dp"
+        android:layout_marginBottom="16dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/copyButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Copy ADB command" />
+
+</LinearLayout>
